@@ -1,4 +1,4 @@
-# Astro TEMPLATE
+# Astro 4 TEMPLATE
 
 > ### [LIVE DEMO](https://astro-01.eavinti.com/)
 
