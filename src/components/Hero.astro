@@ -1,5 +1,6 @@
 ---
-interface Props {}
+interface Props {
+}
 
 const {} = Astro.props;
 ---
@@ -35,7 +36,8 @@ const {} = Astro.props;
                                class="rounded-md bg-white border border-black px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
                                 Signup
                             </a>
-                            <a href="https://github.com/eavinti/astro-landing" class="text-sm font-semibold leading-6 text-gray-900">Get the code<span
+                            <a href="https://github.com/eavinti/astro-landing"
+                               class="text-sm font-semibold leading-6 text-gray-900">Get the code<span
                                     aria-hidden="true">→</span></a>
                         </div>
                     </div>
@@ -43,8 +45,9 @@ const {} = Astro.props;
             </div>
 
             <div class="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen relative">
-                <img class="rounded-xl"
-                     src="./hero.png"/>
+                <img id="image"
+                     class="rounded-xl absolute top-0 left-0 w-full h-auto opacity-0 transition-opacity duration-1000 ease-in-out"
+                     src="https://uploads-ssl.webflow.com/5ea7fd4e3d52ef73804bc877/640942c2de5aef189fead7de_Screenshot-min-3.png"/>
                 <div class="absolute top-0 right-0 rounded-bl-xl p-6 bg-gray-50">
                     <svg class="h-2 w-2 inline fill-black mr-2" viewBox="0 0 6 6" aria-hidden="true">
                         <circle cx="3" cy="3" r="3"/>
@@ -73,3 +76,38 @@ const {} = Astro.props;
         <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
     </div>
 </div>
+
+
+<script type="module" client:load>
+    const images = [
+        "https://uploads-ssl.webflow.com/5ea7fd4e3d52ef73804bc877/640942c2de5aef189fead7de_Screenshot-min-3.png",
+        "https://uploads-ssl.webflow.com/5ea7fd4e3d52ef73804bc877/63f2acd1cdf34e09cfb7e39e_Screenshot-min-4.png",
+        "https://uploads-ssl.webflow.com/5ea7fd4e3d52ef73804bc877/63f1a16ac16726b1e653e8ca_Screenshot-min.png",
+        // Add more URLs as needed
+    ];
+    let currentIndex = 0;
+    const imageElement = document.getElementById('image');
+
+    // Initially, set the image opacity to 100 to ensure it is visible
+    imageElement.classList.remove('opacity-0');
+
+    function changeImage() {
+        // Add opacity class 0 to make the current image transparent
+        imageElement.classList.add('opacity-0');
+
+        setTimeout(() => {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            imageElement.src = images[currentIndex];
+            // Wait for the image to load before making it visible
+            imageElement.onload = () => {
+                imageElement.classList.remove('opacity-0'); // Make the new image visible
+            };
+        }, 1000); // This time should match the duration of the opacity transition
+    }
+
+    // Starts image transition every 4 seconds (includes 1 second for transition duration)
+    setInterval(changeImage, 4000);
+</script>
