@@ -1,0 +1,154 @@
+{
+    "site_basligi": "Aksu Köyü | Hendek, Sakarya",
+    "menu": [
+      {
+        "isim": "Anasayfa",
+        "link": "index.html"
+      },
+      {
+        "isim": "Köyümüz",
+        "link": "koyumuz.html",
+        "alt_menu": [
+          {
+            "isim": "Tarihçe",
+            "link": "tarihce.html"
+          },
+          {
+            "isim": "Coğrafi Konum",
+            "link": "cografya.html"
+          },
+          {
+            "isim": "Nüfus",
+            "link": "nufus.html"
+          },
+          {
+            "isim": "Muhtarlık",
+            "link": "muhtarlik.html"
+          }
+        ]
+      },
+      {
+        "isim": "Yaşam",
+        "link": "yasam.html",
+        "alt_menu": [
+          {
+            "isim": "Kültür ve Gelenekler",
+            "link": "kultur.html"
+          },
+          {
+            "isim": "Doğal Güzellikler",
+            "link": "doga.html"
+          },
+          {
+            "isim": "Yöresel Lezzetler",
+            "link": "lezzetler.html"
+          }
+        ]
+      },
+      {
+        "isim": "Galeri",
+        "link": "galeri.html"
+      },
+      {
+        "isim": "İletişim",
+        "link": "iletisim.html"
+      }
+    ],
+    "anasayfa": {
+      "karsilama_basligi": "Doğayla İç İçe Huzurlu Bir Köy: Aksu'ya Hoş Geldiniz",
+      "karsilama_metni": "Sakarya'nın Hendek ilçesine bağlı, tarihi ve doğal güzellikleriyle öne çıkan şirin orman köyümüz Aksu'nun resmi web sitesine hoş geldiniz. Sitemizde köyümüz hakkında merak ettiğiniz her türlü bilgiye ulaşabilir, köyümüzün eşsiz atmosferini yakından tanıyabilirsiniz.",
+      "hizli_linkler": [
+        {
+          "baslik": "Köyümüzün Tarihçesi",
+          "metin": "1800'lü yıllara dayanan köklü geçmişimizi ve köyümüzün kuruluş hikayesini keşfedin.",
+          "link": "tarihce.html"
+        },
+        {
+          "baslik": "Doğal Güzellikler",
+          "metin": "Yemyeşil ormanları, serin suları ve eşsiz manzaralarıyla köyümüzün doğal zenginliklerini görün.",
+          "link": "doga.html"
+        },
+        {
+          "baslik": "Güncel Haberler",
+          "metin": "Köyümüzdeki son gelişmelerden, etkinliklerden ve duyurulardan haberdar olun.",
+          "link": "haberler.html"
+        }
+      ]
+    },
+    "koyumuz": {
+      "tarihce": {
+        "baslik": "Aksu Köyünün Kuruluş Tarihçesi",
+        "metin": "Aksu köyü Sakarya ilinin Hendek İlçesine bağlı olup, İlçe Merkezine 30 km mesafede Karadere, Göksu, Diken ve Güney köylerinin ortasında bulunan şirin bir orman köyüdür. [5] Tarihçesi 1800'lü yıllara dayanmaktadır. Aksu Köyü, Trabzon İlinin Çaykara ilçesinden olan Ğurnaoğlu Ali YILDIZ (Usta), Hamit CAN ve Kas Mustafa efendilerin girişimi ile kurulmuştur. 1800’lü yılların ortasında Kadife Kale (Güney Köyü)'de ustalık yapan Ali usta, İri Ali lakaplı şahsın evinde çalışırken şimdiki Aksu Köyü topraklarını köy kurmak için tespit etmiştir. Aynı düşünce ile yine Trabzon Çaykara’lı olan Hamit Can, Hendek Şeyh Köyünde oturan Abaza Kadir bey ile tanışmış ve Kadir beyin tavsiyesi ile sürülerini otlattığı mevkiye, yani şimdiki Aksu köyünün bulunduğu yere gelerek Ali Usta ile tanışmış, köyün kurulmasına beraber karar vererek o bölgeye geçip iki orman kulübesi kurmuşlardır. Kısa bir zaman sonra Hamit Can, Adapazarı’nda camii avlusunda yine Çaykaralı olan Kas Mustafa efendi ile karşılaşıp düşüncelerini anlatmış; Kas Mustafa efendi bu teklifi kabul edip beraberce şimdiki Aksu topraklarına gelerek mesken kurmuşlardır. İlk tespit ettikleri Göynük Irmağı diye tabir edilen (Üst yurtluktan akan) suyu, su yolu kazarak oturdukları bölgeye taşımışlardır. Daha sonra şimdiki okulun olduğu yere değirmen ve mescit yapmışlardır. Fakat Trabzon İlinin Çaykara İlçesinden birbirinden habersiz göçüp gelen üç arkadaş Devlet tarafından mahkemeye verilmiştir. Mahkeme heyetine köyün kuruluşunun daha eskiye dayandığını ve ormanı kesip açma yapmadıklarını gelen yetkililere ispat etmek için Kafkasya’dan göçüp gelerek daha aşağı bölgelerde yurt tutan Abhazlardan destek almışlar, yani çoluk çocuk, kedi, köpek, koyun ve tavukları ile gelerek eski yerleşim yeri olduğunun mesajını vermişler ve bu dayanışmadan sonuç almışlardır. Kısa bir zaman sonra Köyün nüfusu Çaykara'dan davet ettikleri eski komşuları ile 15 haneye ulaşmış ve bununla beraber ilk akıtılıp getirilen su yatağı değiştirilmiş, Çiğdem boğazı diye adlandırılan yerden tespit ettikleri yeni su kaynağını şu anki mevcut su arkından getirmişlerdir. Mevcut su arkının üzerine üst mahalleden köy merkezinde ve arkın dere birleşiminde olmak üzere üç su değirmeni bulunmaktadır. [3]"
+      },
+      "cografi_konum": {
+        "baslik": "Coğrafi Konum ve Ulaşım",
+        "metin": "Aksu köyü, Marmara Bölgesi'nde, Sakarya ilinin Hendek ilçesine bağlı bir mahalledir. [4] Sakarya il merkezine 53 km, Hendek ilçe merkezine ise 28 km uzaklıktadır. [4] Karadere, Göksu, Diken ve Güney köylerinin ortasında yer alan köyümüz, yemyeşil bir ormanlık alan içerisinde kurulmuştur. [3, 5] Köyümüzün koordinatları 40°42′16″N 30°51′16″E şeklindedir. [4] Ulaşım, Hendek ilçe merkezinden kalkan minibüsler ve özel araçlarla sağlanmaktadır."
+      },
+      "nufus": {
+        "baslik": "Nüfus Bilgileri",
+        "metin": "Köyümüzün nüfusu yıllara göre değişiklik göstermektedir. Türkiye İstatistik Kurumu'nun 2023 yılı verilerine göre mahallemizin nüfusu 728'dir. [4] Geçmiş yıllara ait nüfus verileri ise şu şekildedir: 2000 yılında 716, 1997 yılında ise 646 kişi olarak kaydedilmiştir. [4]"
+      },
+      "muhtarlik": {
+        "baslik": "Aksu Köyü Muhtarlığı",
+        "muhtar_adi": "[Buraya Güncel Muhtarın Adı Soyadı Gelecek]",
+        "iletisim_bilgileri": {
+          "telefon": "[Muhtarlık Telefon Numarası]",
+          "eposta": "[Muhtarlık E-posta Adresi]",
+          "adres": "Aksu Mahallesi, Hendek/Sakarya"
+        },
+        "aza_listesi": [
+          "[Aza Adı Soyadı]",
+          "[Aza Adı Soyadı]",
+          "[Aza Adı Soyadı]",
+          "[Aza Adı Soyadı]"
+        ]
+      }
+    },
+    "yasam": {
+      "kultur_ve_gelenekler": {
+        "baslik": "Kültür ve Geleneklerimiz",
+        "metin": "Köyümüz, Trabzon Çaykara kökenli kurucularının getirdiği Karadeniz kültürü ile Sakarya'nın yerel kültürünün harmanlandığı zengin bir kültürel yapıya sahiptir. Düğünlerimiz, bayramlarımız ve özel günlerimizde yaşatılan gelenek ve göreneklerimiz, toplumsal bağlarımızı güçlendirmektedir. Yöresel müziklerimiz ve halk oyunlarımız, şenliklerimizin vazgeçilmez bir parçasıdır. Köy halkı, imece usulüyle birbirine destek olur ve bu dayanışma kültürü nesilden nesile aktarılır."
+      },
+      "dogal_guzellikler": {
+        "baslik": "Doğal Güzelliklerimiz",
+        "metin": "Aksu, adını berrak sularından alan, doğasıyla büyüleyen bir köydür. Çam dağlarının eteğinde, yeşilin her tonunu barındıran ormanlarla çevrilidir. [6] Köyümüzün içinden geçen Göynük Irmağı ve Çiğdem Boğazı'ndan gelen su kaynağı, çevresine hayat vermektedir. [3] Yürüyüş ve piknik için elverişli alanları, temiz havası ve sakin atmosferi ile ziyaretçilerine huzurlu bir ortam sunar."
+      },
+      "yoresel_lezzetler": {
+        "baslik": "Yöresel Lezzetler",
+        "metin": "Mutfağımız, Karadeniz ve Marmara mutfaklarının lezzetlerini bir araya getirir. Özellikle mısır ekmeği, karalahana çorbası, hamsili pilav gibi Karadeniz'e özgü tatların yanı sıra, köyümüzde yetişen taze sebze ve meyvelerle hazırlanan yöresel yemekler de sofralarımızı süsler. Köy fırınlarında pişen ekmekler ve doğal ürünlerle hazırlanan kahvaltılar, damaklarda unutulmaz bir tat bırakır."
+      }
+    },
+    "galeri": {
+      "baslik": "Köyümüzden Kareler",
+      "aciklama": "Aksu Köyü'nün eşsiz doğasını, sosyal yaşamını ve özel anlarını yansıtan fotoğraf ve videolar.",
+      "albumler": [
+        {
+          "album_adi": "Doğa Manzaraları",
+          "kapak_fotografi": "doga.jpg"
+        },
+        {
+          "album_adi": "Köy Şenlikleri",
+          "kapak_fotografi": "senlik.jpg"
+        },
+        {
+          "album_adi": "Geçmişten Günümüze",
+          "kapak_fotografi": "tarihi.jpg"
+        }
+      ]
+    },
+    "iletisim": {
+      "baslik": "Bize Ulaşın",
+      "adres": "Aksu Mahallesi, 54300 Hendek/Sakarya, Türkiye",
+      "harita_linki": "https://www.google.com/maps?q=40.70441,30.85454",
+      "sosyal_medya": [
+        {
+          "platform": "Facebook",
+          "link": "[Köyün Facebook Sayfası Linki]"
+        },
+        {
+          "platform": "Instagram",
+          "link": "[Köyün Instagram Sayfası Linki]"
+        }
+      ]
+    }
+  }

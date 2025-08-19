@@ -9,13 +9,13 @@ interface Props {
 const {title} = Astro.props;
 ---
 <!DOCTYPE html>
-<html class="h-full bg-gray-50" lang="en">
+<html class="h-full bg-gray-50" lang="tr">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="description" content="Dashboard template">
+  <meta name="description" content="Aksu Köyü - Hendek, Sakarya">
   <meta name="viewport" content="width=device-width"/>
   <link rel="icon" type="image/svg+xml" href="/logo-64x64.png"/>
-  <meta name="generator" content="Dashboard"/>
+  <meta name="generator" content="Aksu Köyü"/>
   <title>{title}</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,15 +29,16 @@ const {title} = Astro.props;
   <!-- Header -->
   <header class="absolute inset-x-0 top-0 z-50">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <a href="/" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="/logo-black.png" alt="">
-        </a>
-      </div>
+                      <div class="flex lg:flex-1">
+                    <a href="/" class="-m-1.5 p-1.5 flex items-center">
+                        <span class="sr-only">Aksu Köyü</span>
+                        <img class="h-8 w-auto mr-2" src="/logo-black.png" alt="Aksu Köyü Logo">
+                        <span class="text-xl font-bold text-gray-900">Aksu</span>
+                    </a>
+                </div>
       <div id="openNavBar" class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-          <span class="sr-only">Open main menu</span>
+          <span class="sr-only">Menüyü aç</span>
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
@@ -45,13 +46,61 @@ const {title} = Astro.props;
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="/products" class="text-sm font-semibold leading-6 text-gray-900">Products</a>
-        <a href="/features" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-        <a href="/company" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
-        <a href="/contact" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
+        <div class="relative group">
+          <a href="/" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600 transition-colors">
+            Anasayfa
+          </a>
+        </div>
+        <div class="relative group">
+          <a href="/koyumuz" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600 transition-colors">
+            Köyümüz
+          </a>
+          <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md py-2 min-w-48 z-50">
+            <a href="/tarihce" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+              Tarihçe
+            </a>
+            <a href="/cografya" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+              Coğrafi Konum
+            </a>
+            <a href="/nufus" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+              Nüfus
+            </a>
+            <a href="/muhtarlik" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+              Muhtarlık
+            </a>
+          </div>
+        </div>
+        <div class="relative group">
+          <a href="/yasam" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600 transition-colors">
+            Yaşam
+          </a>
+          <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md py-2 min-w-48 z-50">
+            <a href="/kultur" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+              Kültür ve Gelenekler
+            </a>
+            <a href="/doga" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+              Doğal Güzellikler
+            </a>
+            <a href="/lezzetler" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+              Yöresel Lezzetler
+            </a>
+          </div>
+        </div>
+        <div class="relative group">
+          <a href="/galeri" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600 transition-colors">
+            Galeri
+          </a>
+        </div>
+        <div class="relative group">
+          <a href="/iletisim" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600 transition-colors">
+            İletişim
+          </a>
+        </div>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="/login" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="/iletisim" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600 transition-colors">
+          İletişim <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
@@ -62,11 +111,11 @@ const {title} = Astro.props;
         class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="/" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="/logo-black.png" alt="">
+            <span class="sr-only">Aksu Köyü</span>
+            <img class="h-8 w-auto" src="/logo-black.png" alt="Aksu Köyü Logo">
           </a>
           <button id="closeNavBar" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
+            <span class="sr-only">Menüyü kapat</span>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                  aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -76,19 +125,73 @@ const {title} = Astro.props;
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <a href="/products"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Products</a>
-              <a href="/features"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-              <a href="/company"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
-              <a href="/contact"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
+              <div>
+                <a href="/"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                  Anasayfa
+                </a>
+              </div>
+              <div>
+                <a href="/koyumuz"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                  Köyümüz
+                </a>
+                <div class="ml-4 space-y-1">
+                  <a href="/tarihce"
+                     class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
+                    Tarihçe
+                  </a>
+                  <a href="/cografya"
+                     class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
+                    Coğrafi Konum
+                  </a>
+                  <a href="/nufus"
+                     class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
+                    Nüfus
+                  </a>
+                  <a href="/muhtarlik"
+                     class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
+                    Muhtarlık
+                  </a>
+                </div>
+              </div>
+              <div>
+                <a href="/yasam"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                  Yaşam
+                </a>
+                <div class="ml-4 space-y-1">
+                  <a href="/kultur"
+                     class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
+                    Kültür ve Gelenekler
+                  </a>
+                  <a href="/doga"
+                     class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
+                    Doğal Güzellikler
+                  </a>
+                  <a href="/lezzetler"
+                     class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
+                    Yöresel Lezzetler
+                  </a>
+                </div>
+              </div>
+              <div>
+                <a href="/galeri"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                  Galeri
+                </a>
+              </div>
+              <div>
+                <a href="/iletisim"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                  İletişim
+                </a>
+              </div>
             </div>
             <div class="py-6">
-              <a href="/login"
+              <a href="/iletisim"
                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                Log in
+                İletişim
               </a>
             </div>
           </div>

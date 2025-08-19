@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Galeri klasöründeki tüm görselleri al
+const galeriKlasoru = '/galeri/';
+const galeriGorselleri = [
+    // Buraya galeri klasöründeki görsellerin isimleri eklenecek
+    // Örnek: 'gorsel1.jpg', 'gorsel2.jpg', 'gorsel3.jpg'
+    // Şimdilik placeholder görseller kullanıyoruz
+    'placeholder1.jpg',
+    'placeholder2.jpg', 
+    'placeholder3.jpg',
+    'placeholder4.jpg',
+    'placeholder5.jpg',
+    'placeholder6.jpg'
+];
+---
+
+<Layout title="Galeri | Aksu Köyü">
+    <!-- Hero Section -->
+    <div class="relative isolate overflow-hidden bg-gradient-to-b from-green-100/20 pt-14">
+        <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                    Galeri
+                </h1>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                    Aksu köyümüzün güzelliklerini fotoğraflarla keşfedin. Doğal manzaralar, tarihi yerler ve köy yaşamından kareler.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galeri Section -->
+    <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Fotoğraf Galerisi</h2>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                    Köyümüzün en güzel anlarını ve manzaralarını sizler için derledik.
+                </p>
+            </div>
+            
+            <!-- Galeri Grid -->
+            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                {galeriGorselleri.map((gorsel, index) => (
+                    <article class="flex flex-col items-start group">
+                        <div class="relative w-full">
+                            <div class="aspect-[16/9] w-full rounded-2xl bg-gray-100 overflow-hidden group-hover:opacity-75 transition-opacity">
+                                <img 
+                                    src={`${galeriKlasoru}${gorsel}`} 
+                                    alt={`Aksu Köyü - ${index + 1}`}
+                                    class="h-full w-full object-cover"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                        </div>
+                        <div class="max-w-xl">
+                            <div class="mt-8 flex items-center gap-x-4 text-xs">
+                                <time datetime="2024-01-01" class="text-gray-500">Aksu Köyü</time>
+                                <span class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                                    Fotoğraf {index + 1}
+                                </span>
+                            </div>
+                            <div class="group relative">
+                                <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                                    <span class="absolute inset-0"></span>
+                                    Aksu Köyü Manzarası
+                                </h3>
+                                <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                                    Köyümüzün eşsiz doğal güzelliklerini yansıtan bu fotoğraf, Aksu'nun karakteristik özelliklerini gösteriyor.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                ))}
+            </div>
+
+            
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+</style>
