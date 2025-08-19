@@ -56,16 +56,16 @@ const {title} = Astro.props;
             Köyümüz
           </a>
           <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md py-2 min-w-48 z-50">
-            <a href="/tarihce" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+            <a href="/koyumuz#tarihce" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
               Tarihçe
             </a>
-            <a href="/cografya" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+            <a href="/koyumuz#cografya" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
               Coğrafi Konum
             </a>
-            <a href="/nufus" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+            <a href="/koyumuz#nufus" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
               Nüfus
             </a>
-            <a href="/muhtarlik" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+            <a href="/koyumuz#muhtarlik" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
               Muhtarlık
             </a>
           </div>
@@ -75,13 +75,13 @@ const {title} = Astro.props;
             Yaşam
           </a>
           <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md py-2 min-w-48 z-50">
-            <a href="/kultur" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+            <a href="/yasam#kultur" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
               Kültür ve Gelenekler
             </a>
-            <a href="/doga" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+            <a href="/yasam#doga" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
               Doğal Güzellikler
             </a>
-            <a href="/lezzetler" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
+            <a href="/yasam#lezzetler" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600">
               Yöresel Lezzetler
             </a>
           </div>
@@ -137,19 +137,19 @@ const {title} = Astro.props;
                   Köyümüz
                 </a>
                 <div class="ml-4 space-y-1">
-                  <a href="/tarihce"
+                  <a href="/koyumuz#tarihce"
                      class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
                     Tarihçe
                   </a>
-                  <a href="/cografya"
+                  <a href="/koyumuz#cografya"
                      class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
                     Coğrafi Konum
                   </a>
-                  <a href="/nufus"
+                  <a href="/koyumuz#nufus"
                      class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
                     Nüfus
                   </a>
-                  <a href="/muhtarlik"
+                  <a href="/koyumuz#muhtarlik"
                      class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
                     Muhtarlık
                   </a>
@@ -161,15 +161,15 @@ const {title} = Astro.props;
                   Yaşam
                 </a>
                 <div class="ml-4 space-y-1">
-                  <a href="/kultur"
+                  <a href="/yasam#kultur"
                      class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
                     Kültür ve Gelenekler
                   </a>
-                  <a href="/doga"
+                  <a href="/yasam#doga"
                      class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
                     Doğal Güzellikler
                   </a>
-                  <a href="/lezzetler"
+                  <a href="/yasam#lezzetler"
                      class="block rounded-lg px-3 py-2 text-sm leading-7 text-gray-600 hover:bg-gray-50">
                     Yöresel Lezzetler
                   </a>
@@ -215,12 +215,14 @@ const {title} = Astro.props;
 
 
 <script>
-  const navBar: HTMLElement = document.getElementById('navBar');
+  const navBar = document.getElementById('navBar') as HTMLElement;
   const closeNavBar = document.getElementById('closeNavBar');
   const openNavBar = document.getElementById('openNavBar');
 
-  closeNavBar.addEventListener('click', toggleMenu);
-  openNavBar.addEventListener('click', toggleMenu);
+  if (closeNavBar && openNavBar) {
+    closeNavBar.addEventListener('click', toggleMenu);
+    openNavBar.addEventListener('click', toggleMenu);
+  }
 
   function toggleMenu() {
     navBar.classList.toggle("hidden");

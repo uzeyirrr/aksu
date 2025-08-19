@@ -4,15 +4,26 @@ import Layout from '../layouts/Layout.astro';
 // Galeri klasöründeki tüm görselleri al
 const galeriKlasoru = '/galeri/';
 const galeriGorselleri = [
-    // Buraya galeri klasöründeki görsellerin isimleri eklenecek
-    // Örnek: 'gorsel1.jpg', 'gorsel2.jpg', 'gorsel3.jpg'
-    // Şimdilik placeholder görseller kullanıyoruz
-    'placeholder1.jpg',
-    'placeholder2.jpg', 
-    'placeholder3.jpg',
-    'placeholder4.jpg',
-    'placeholder5.jpg',
-    'placeholder6.jpg'
+    {
+        dosya: 'imgi_10_R0010622.jpg',
+        baslik: 'Tarihi Değirmen',
+        aciklama: 'Köyümüzün tarihi değirmeni ve çevresindeki doğal güzellikler. Yeşilliklerle kaplı ortamda yer alan bu yapı, köyümüzün geçmişini yansıtıyor.'
+    },
+    {
+        dosya: 'imgi_7_Photo31.jpg',
+        baslik: 'Köy Merkezi ve Dere',
+        aciklama: 'Aksu köyümüzün merkezindeki tarihi yapılar ve akan dere manzarası. Taş ve tuğla karışımı mimari yapılar köyümüzün karakteristik özelliklerini yansıtıyor.'
+    },
+    {
+        dosya: 'imgi_9_RIMG0093.jpg',
+        baslik: 'Köy Okulu',
+        aciklama: 'Sarı boyalı köy okulumuz ve önündeki bayrak direği. Eğitimin önemini vurgulayan bu yapı, köyümüzün gelişiminde önemli bir rol oynuyor.'
+    },
+    {
+        dosya: 'imgi_8_R0010170.jpg',
+        baslik: 'Kış Manzarası',
+        aciklama: 'Karlarla kaplı köyümüzün büyüleyici kış manzarası. Beyaz örtü altındaki yapılar ve uzaktaki karlı dağlar Aksu\'nun dört mevsim güzelliğini gösteriyor.'
+    }
 ];
 ---
 
@@ -46,10 +57,11 @@ const galeriGorselleri = [
                 {galeriGorselleri.map((gorsel, index) => (
                     <article class="flex flex-col items-start group">
                         <div class="relative w-full">
-                            <div class="aspect-[16/9] w-full rounded-2xl bg-gray-100 overflow-hidden group-hover:opacity-75 transition-opacity">
+                            <div class="aspect-[16/9] w-full rounded-2xl bg-gray-100 overflow-hidden group-hover:opacity-75 transition-opacity cursor-pointer" 
+                                 onclick={`openModal('${galeriKlasoru}${gorsel.dosya}', '${gorsel.baslik}', '${gorsel.aciklama}')`}>
                                 <img 
-                                    src={`${galeriKlasoru}${gorsel}`} 
-                                    alt={`Aksu Köyü - ${index + 1}`}
+                                    src={`${galeriKlasoru}${gorsel.dosya}`} 
+                                    alt={`Aksu Köyü - ${gorsel.baslik}`}
                                     class="h-full w-full object-cover"
                                     loading="lazy"
                                 />
@@ -66,15 +78,29 @@ const galeriGorselleri = [
                             <div class="group relative">
                                 <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                                     <span class="absolute inset-0"></span>
-                                    Aksu Köyü Manzarası
+                                    {gorsel.baslik}
                                 </h3>
                                 <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                                    Köyümüzün eşsiz doğal güzelliklerini yansıtan bu fotoğraf, Aksu'nun karakteristik özelliklerini gösteriyor.
+                                    {gorsel.aciklama}
                                 </p>
                             </div>
                         </div>
                     </article>
                 ))}
+            </div>
+
+            <!-- Modal -->
+            <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+                <div class="relative max-w-4xl max-h-full">
+                    <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-2xl font-bold hover:text-gray-300 z-10">
+                        &times;
+                    </button>
+                    <img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg">
+                    <div class="absolute bottom-4 left-4 right-4 text-white bg-black bg-opacity-50 p-4 rounded-lg">
+                        <h3 id="modalTitle" class="text-xl font-bold mb-2"></h3>
+                        <p id="modalDescription" class="text-sm"></p>
+                    </div>
+                </div>
             </div>
 
             
@@ -90,3 +116,48 @@ const galeriGorselleri = [
         overflow: hidden;
     }
 </style>
+
+<script>
+    function openModal(imageSrc: string, title: string, description: string) {
+        const modalImage = document.getElementById('modalImage') as HTMLImageElement;
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const imageModal = document.getElementById('imageModal');
+        
+        if (modalImage && modalTitle && modalDescription && imageModal) {
+            modalImage.src = imageSrc;
+            modalImage.alt = title;
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            imageModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal() {
+        const imageModal = document.getElementById('imageModal');
+        if (imageModal) {
+            imageModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    // ESC tuşu ile modal'ı kapatma
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    // Modal dışına tıklayarak kapatma
+    document.addEventListener('DOMContentLoaded', function() {
+        const imageModal = document.getElementById('imageModal');
+        if (imageModal) {
+            imageModal.addEventListener('click', function(event) {
+                if (event.target === this) {
+                    closeModal();
+                }
+            });
+        }
+    });
+</script>
